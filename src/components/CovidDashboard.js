@@ -41,14 +41,17 @@ const CovidDashboard = (props) => {
 
     return ( <Container>
         <Row>
-            <Col xs={2} ><ListPatients onPatientButtonClicked={patientButtonClickedHandler}  Seekbarsort={SeekbarPatients} /></Col>  
-        
+            <Col xs={7} ><CovidGoogleMap onPatientMarkerClicked={patientMarkerClickedHandler} onLocationButtonClick={currentPatient} Seekbarsort={SeekbarPatients} /></Col>
+            
+            
             <Col xs={3} >
                 <h5>Thông tin chi tiết bệnh nhân</h5>
                 {currentPatient &&
-                <PatientInfo patients={currentPatient}/>}
+                <PatientInfo patients={currentPatient}/>}  
             </Col>
-            <Col xs={7} ><CovidGoogleMap onPatientMarkerClicked={patientMarkerClickedHandler} onLocationButtonClick={currentPatient} Seekbarsort={SeekbarPatients} /></Col>
+
+            <Col xs={2} ><ListPatients onPatientButtonClicked={patientButtonClickedHandler}  Seekbarsort={SeekbarPatients} /></Col> 
+                    
         </Row>
       
         <Row>
