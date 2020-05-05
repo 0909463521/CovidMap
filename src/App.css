@@ -44,3 +44,9 @@
   background-color: #4CAF50; /* Green */
   color: #4CAF50;
 }
+.list-group{
+  max-height: 400px;
+  margin-bottom: 5px;
+  overflow:scroll;
+  -webkit-overflow-scrolling: touch;
+}
